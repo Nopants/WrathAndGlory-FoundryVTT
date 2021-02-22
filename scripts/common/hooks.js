@@ -19,7 +19,7 @@ import { AugmenticSheet } from "../sheet/augmentic.js";
 import { initializeHandlebars } from "./handlebars.js";
 import { migrateWorld } from "./migration.js";
 import { prepareCommonRoll, prepareWeaponRoll, prepareDamageRoll, preparePsychicRoll } from "./dialog.js";
-import { commonRoll, weaponRoll, damageRoll, psychicRoll } from "./roll.js";
+import { commonRoll, weaponRoll, damageRoll, psychicRoll, reroll } from "./roll.js";
 
 Hooks.once("init", () => {
   CONFIG.Actor.entityClass = WrathAndGloryActor;
@@ -32,7 +32,8 @@ Hooks.once("init", () => {
     commonRoll,
     weaponRoll,
     psychicRoll,
-    damageRoll
+    damageRoll,
+    reroll
   };
   CONFIG.Combat.initiative = { formula: "(@attributes.initiative.total)d6", decimals: 0 };
   Actors.unregisterSheet("core", ActorSheet);

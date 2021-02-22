@@ -121,46 +121,79 @@ function _computeDamageChat(rollData) {
 }
 
 function _computeDice(dieValue) {
-  if (dieValue === 6) {
-    return {
-      name: "icon",
-      value: 2,
-      score: dieValue,
-      isWrath: false,
-      rerollable: false,
-      weight: 3
-    };
-  } else if (dieValue > 3) {
-    return {
-      name: "success",
-      value: 1,
-      score: dieValue,
-      isWrath: false,
-      rerollable: false,
-      weight: 2
-    };
-  } else {
-    return {
-      name: "failed",
-      value: 0,
-      score: dieValue,
-      isWrath: false,
-      rerollable: true,
-      weight: 1
-    };
+  switch(dieValue) {
+    case 1:
+      return {
+        name: "failed_1",
+        value: 0,
+        score: dieValue,
+        isWrath: false,
+        rerollable: true,
+        weight: 1
+      };
+
+    case 2:
+      return {
+        name: "failed_2",
+        value: 0,
+        score: dieValue,
+        isWrath: false,
+        rerollable: true,
+        weight: 1
+      };
+
+    case 3:
+      return {
+        name: "failed_3",
+        value: 0,
+        score: dieValue,
+        isWrath: false,
+        rerollable: true,
+        weight: 1
+      };
+
+    case 4:
+      return {
+        name: "success_4",
+        value: 1,
+        score: dieValue,
+        isWrath: false,
+        rerollable: false,
+        weight: 2
+      };
+
+    case 5:
+      return {
+        name: "success_5",
+        value: 1,
+        score: dieValue,
+        isWrath: false,
+        rerollable: false,
+        weight: 2
+      };
+
+    case 6:
+      return {
+        name: "icon",
+        value: 2,
+        score: dieValue,
+        isWrath: false,
+        rerollable: false,
+        weight: 3
+      };
   }
 }
 
 function _computeExtraDice(dieValue, die) {
   let propertyName = Object.keys(die)[dieValue - 1];
   let value = die[propertyName];
-  let name = "failed";
+  let name = "failed_blank";
   let weight = 1;
   if (value >= 2) {
-    name = "icon";
+    name = "double_damage";
     weight = 3;
   } else if (value === 1) {
-    name = "success";
+    name = "single_damage";
     weight = 2;
   }
   return {
@@ -174,42 +207,66 @@ function _computeExtraDice(dieValue, die) {
 }
 
 function _computeWrath(dieValue) {
-  if (dieValue === 6) {
-    return {
-      name: "wrath-critical",
-      value: 2,
-      score: dieValue,
-      isWrath: true,
-      rerollable: false,
-      weight: 0
-    };
-  } else if (dieValue > 3) {
-    return {
-      name: "wrath-success",
-      value: 1,
-      score: dieValue,
-      isWrath: true,
-      rerollable: false,
-      weight: -1
-    };
-  } else if (dieValue === 1) {
-    return {
-      name: "wrath-complication",
-      value: 0,
-      score: dieValue,
-      isWrath: true,
-      rerollable: false,
-      weight: -3
-    };
-  } else {
-    return {
-      name: "wrath-failed",
-      value: 0,
-      score: dieValue,
-      isWrath: true,
-      rerollable: true,
-      weight: -2
-    };
+  switch(dieValue) {
+    case 1:
+      return {
+        name: "wrath-complication",
+        value: 0,
+        score: dieValue,
+        isWrath: true,
+        rerollable: false,
+        weight: -3
+      };
+
+    case 2:
+      return {
+        name: "wrath-failed_2",
+        value: 0,
+        score: dieValue,
+        isWrath: true,
+        rerollable: true,
+        weight: -2
+      };
+
+    case 3:
+      return {
+        name: "wrath-failed_3",
+        value: 0,
+        score: dieValue,
+        isWrath: true,
+        rerollable: true,
+        weight: -2
+      };
+
+    case 4:
+      return {
+        name: "wrath-success_4",
+        value: 1,
+        score: dieValue,
+        isWrath: true,
+        rerollable: false,
+        weight: -1
+      };
+
+    case 5:
+      return {
+        name: "wrath-success_5",
+        value: 1,
+        score: dieValue,
+        isWrath: true,
+        rerollable: false,
+        weight: -1
+      };
+
+    case 6:
+      return {
+        name: "wrath-critical",
+        value: 2,
+        score: dieValue,
+        isWrath: true,
+        rerollable: false,
+        weight: 0
+      };
   }
 }
 
