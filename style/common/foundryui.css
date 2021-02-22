@@ -1,5 +1,5 @@
 #sidebar {
-    background-image: url("../ui/sidebar.png");
+    background-image: url("../../asset/image/sidebar.png");
   }
 
   #players {
@@ -69,7 +69,7 @@
   }
 
   .chat-message {
-    background: url(../ui/background.jpg) repeat;
+    background: url(".../../asset/image/background.jpg") repeat;
     color: black;
   }
 
