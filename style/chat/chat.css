@@ -90,47 +90,95 @@
   border-radius: 5px;
   padding-top: 5px;
   margin: 5px;
-  font-size: 50px
+  font-size: 0px
 }
 
-.wrath-and-glory.chat .die.failed {
+.wrath-and-glory.chat .die.failed_blank {
   background:white;
   color: black;
-  /*background-image: url("../../asset/image/die-failed.png");*/
 }
 
-.wrath-and-glory.chat .die.success {
+.wrath-and-glory.chat .die.failed_1 {
+  background:white;
+  color: black;
+  background-image: url("../../asset/image/die-failed_1.png");
+}
+
+.wrath-and-glory.chat .die.failed_2 {
+  background:white;
+  color: black;
+  background-image: url("../../asset/image/die-failed_2.png");
+}
+
+.wrath-and-glory.chat .die.failed_3 {
+  background:white;
+  color: black;
+  background-image: url("../../asset/image/die-failed_3.png");
+}
+
+.wrath-and-glory.chat .die.success_4 {
   background: white;
   color: black;
-  /*background-image: url("../../asset/image/die-success.png");*/
+  background-image: url("../../asset/image/die-success_4.png");
+}
+
+.wrath-and-glory.chat .die.success_5 {
+  background: white;
+  color: black;
+  background-image: url("../../asset/image/die-success_5.png");
 }
 
 .wrath-and-glory.chat .die.icon {
   background: white;
   color: #993333;
-  /*background-image: url("../../asset/image/die-icon.png");*/
+  background-image: url("../../asset/image/die-icon.png");
 }
 
 .wrath-and-glory.chat .die.wrath-complication {
   background: #993333;
   color: white;
-  /*background-image: url("../../asset/image/die-wrath-complication.png");*/
+  background-image: url("../../asset/image/die-wrath-complication.png");
 }
 
 .wrath-and-glory.chat .die.wrath-critical {
   background: #993333;
   color: white;
-  /*background-image: url("../../asset/image/die-wrath-critical.png");*/
+  font-size: 0px;
+  background-image: url("../../asset/image/die-wrath-critical.png");
 }
 
-.wrath-and-glory.chat .die.wrath-failed {
+.wrath-and-glory.chat .die.wrath-failed_2 {
   background: #993333;
   color: white;
-  /*background-image: url("../../asset/image/die-wrath-failed.png");*/
+  background-image: url("../../asset/image/die-wrath-failed_2.png");
 }
 
-.wrath-and-glory.chat .die.wrath-success {
+.wrath-and-glory.chat .die.wrath-failed_3 {
+  background: #993333;
+  color: white;
+  background-image: url("../../asset/image/die-wrath-failed_3.png");
+}
+
+.wrath-and-glory.chat .die.wrath-success_4 {
   background: #993333;
   color: black;
-  /*background-image: url("../../asset/image/die-wrath-success.png");*/
+  background-image: url("../../asset/image/die-wrath-success_4.png");
+}
+
+.wrath-and-glory.chat .die.wrath-success_5 {
+  background: #993333;
+  color: black;
+  background-image: url("../../asset/image/die-wrath-success_5.png");
+}
+
+.wrath-and-glory.chat .die.single_damage {
+  background: white;
+  color: black;
+  background-image: url("../../asset/image/die-single-damage.png");
+}
+
+.wrath-and-glory.chat .die.double_damage {
+  background: white;
+  color: black;
+  background-image: url("../../asset/image/die-double-damage.png");
 }
