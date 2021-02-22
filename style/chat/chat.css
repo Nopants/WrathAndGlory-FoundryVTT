@@ -7,14 +7,17 @@
 }
 
 .wrath-and-glory.chat .wrapper {
-  background: url(../../asset/image/background.jpg) repeat;
+  background: url(../../asset/image/background.png) repeat;
   padding: 10px;
 }
 
 .wrath-and-glory.chat .wrapper-input {
-  background: url(../../asset/image/input.jpg) repeat;
+  background: url(../../asset/image/background.jpg) repeat;
   padding: 10px;
   border: 1px solid var(--color-black);
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  border-image: var(--image-border) 5 5 5 5 repeat repeat;
   box-shadow: inset 0 0 6px var(--color-dark-grey);
   position: relative;
 }
@@ -70,11 +73,11 @@
 }
 
 .wrath-and-glory.chat.roll .seal.approved {
-  background-image: url("../../asset/image/approved.png");
+  background-image: url("../../asset/image/approved-stamp.png");
 }
 
 .wrath-and-glory.chat.roll .seal.heresy {
-  background-image: url("../../asset/image/heresy.png");
+  background-image: url("../../asset/image/heresy-stamp.png");
 }
 
 .wrath-and-glory.chat p {

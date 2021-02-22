@@ -1,5 +1,8 @@
 #sidebar {
     background-image: url("../../asset/image/sidebar.png");
+    background-color: rgba(0, 12, 53, 0.781);
+    border: 1px solid rgb(255, 179, 0);
+    box-shadow: 0 0 5px rgb(255, 179, 0);
 }
 
 #players {
