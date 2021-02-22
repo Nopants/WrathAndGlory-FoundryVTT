@@ -1,78 +1,78 @@
 #sidebar {
     background-image: url("../../asset/image/sidebar.png");
-  }
-
-  #players {
-    background-color: rgba(0, 19, 83, 0.65);
-  }
-
-  #navigation #scene-list .scene {
-    background: rgba(0, 19, 83, 0.65);
-  }
-
-  #controls .control-tool {
-    background: rgba(0, 19, 83, 0.65);
-  }
-
-  #controls .scene-control.active,
-  #controls .control-tool.active,
-  #controls .scene-control:hover,
-  #controls .control-tool:hover {
-  border: 1px solid rgb(255, 179, 0);
-  border-bottom: 1px solid rgb(255, 179, 0);
-  box-shadow: 0 0 10px rgb(255, 179, 0);
 }
 
-  #hotbar .bar-controls {
-    background: rgba(0, 19, 83, 0.65);
-  }
+#players {
+    background-color: rgba(0, 19, 83, 0.65);
+}
 
-  #hotbar .macro {
+#navigation #scene-list .scene {
     background: rgba(0, 19, 83, 0.65);
-  }
+}
 
-  #sidebar-tabs {
+#controls .control-tool {
+    background: rgba(0, 19, 83, 0.65);
+}
+
+#controls .scene-control.active,
+#controls .control-tool.active,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+    border: 1px solid rgb(255, 179, 0);
     border-bottom: 1px solid rgb(255, 179, 0);
     box-shadow: 0 0 10px rgb(255, 179, 0);
-  }
+}
 
-  #sidebar-tabs > .item.active {
+#hotbar .bar-controls {
+    background: rgba(0, 19, 83, 0.65);
+}
+
+#hotbar .macro {
+    background: rgba(0, 19, 83, 0.65);
+}
+
+#sidebar-tabs {
+    border-bottom: 1px solid rgb(255, 179, 0);
+    box-shadow: 0 0 10px rgb(255, 179, 0);
+}
+
+#sidebar-tabs > .item.active {
     color: #993333;
     border: 1px solid rgb(255, 179, 0);
     box-shadow: 0 0 6px inset rgb(255, 179, 0);
-  }
+}
 
-  .sidebar-tab .directory-list .directory-item.context,
+.sidebar-tab .directory-list .directory-item.context,
 .sidebar-tab .directory-list .directory-item.active {
-  border-color: rgb(255, 179, 0);
+    border-color: rgb(255, 179, 0);
 }
 
 .sidebar-tab .directory-list .folder .context {
     border-color: rgb(255, 179, 0);
-  }
+}
 
-  #sidebar.collapsed #sidebar-tabs > .item.active {
+#sidebar.collapsed #sidebar-tabs > .item.active {
     border-bottom: 1px solid rgb(255, 179, 0);
-  }
+}
 
-  li.folder.droptarget > header h3 i {
+li.folder.droptarget > header h3 i {
     text-shadow: 0 0 4px rgb(255, 179, 0);
-  }
+}
 
-  .notification-pip {
+.notification-pip {
     color: rgb(255, 179, 0);
-  }
+}
 
-  #chat-controls .roll-type-select {
+#chat-controls .roll-type-select {
     color: white;
     background: black;
-  }
+}
 
-  .chat-message {
-    background: url(".../../asset/image/background.jpg") repeat;
+.chat-message {
+    background: url("../../asset/image/background.jpg") repeat;
     color: black;
-  }
+}
 
-  .chat-message .message-header {
+.chat-message .message-header {
     color: black;
-  }
+}
