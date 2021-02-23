@@ -27,8 +27,8 @@
 #controls .control-tool.active,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-bottom: 0px solid rgba(0, 0, 0, 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     background-image: url("../../asset/image/tool-button-pressed.png");
 }
