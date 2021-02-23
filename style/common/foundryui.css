@@ -52,12 +52,13 @@
 #sidebar-tabs {
     border-bottom: 1px solid rgb(255, 179, 0);
     box-shadow: 0 0 10px rgb(255, 179, 0);
+    background-image: url("../../asset/image/sidebar-header.png");
 }
 
 #sidebar-tabs > .item.active {
-    color: #993333;
-    border: 1px solid rgb(255, 179, 0);
-    box-shadow: 0 0 6px inset rgb(255, 179, 0);
+    color: white;
+    border: 1px solid rgba(0,0,0,0);
+    box-shadow: 0 0 6px inset rgba(0,0,0,0);
 }
 
 .sidebar-tab .directory-list .directory-item.context,
