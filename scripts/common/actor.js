@@ -8,6 +8,40 @@ export class WrathAndGloryActor extends Actor {
         }
     }
 
+    _defaultRollData(rank){
+        return {
+            name: "DIALOG.CUSTOM_ROLL",
+            rank: rank,
+            difficulty: {
+                target: 3,
+                penalty: 0,
+                rank: "none"
+            },
+            pool: {
+                size: 1,
+                bonus: 0,
+                rank: "none"
+            },
+            wrath: {
+                base: 1,
+                isPsy: false,
+                isCommon: true,
+                isWeapon: false
+            },
+            result: {
+                dice: [],
+                wrath: 0,
+                isSuccess: false,
+                isWrathCriticals: false,
+                isWrathComplications: false
+            },
+            rolls: {
+                hit: [],
+                damage: []
+            }
+        };
+    }
+
     _initializeAgent(data) {
         this._initializeBonus(data);
         this._computeItems(data);
