@@ -20,6 +20,14 @@ export class WrathAndGloryActorSheet extends ActorSheet {
         html.find(".roll-weapon").click(async ev => await this._prepareRollWeapon(ev));
         html.find(".roll-psychic-power").click(async ev => await this._prepareRollPsychicPower(ev));
 
+        // Drag inventory item
+        let handler = (ev) => this._onDragStart(ev);
+        html.find('.list-item').each((i, item) => {
+            if (item.dataset && item.dataset.itemId) {
+                item.setAttribute('draggable', true);
+                item.addEventListener('dragstart', handler, false);
+            }
+        });
     }
 
     _getHeaderButtons() {
