@@ -1,8 +1,9 @@
 #sidebar {
     background-image: url("../../asset/image/sidebar.png");
     background-color: rgba(0, 12, 53, 0.781);
-    border: 1px solid rgb(255, 179, 0);
-    box-shadow: 0 0 5px rgb(255, 179, 0);
+    border-width: 5px 5px 5px 5px;
+    border-image: url("../../asset/image/trimmed-border2.png") 10 10 10 10 repeat repeat;
+    box-shadow: 0 0 0px rgb(255, 179, 0);
 }
 
 #players {
@@ -13,17 +14,23 @@
     background: rgba(0, 19, 83, 0.65);
 }
 
+#controls .scene-control,
 #controls .control-tool {
-    background: rgba(0, 19, 83, 0.65);
+    background: rgba(0, 19, 83, 0);
+    background-image: url("../../asset/image/tool-button.png");
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    border: 0px;
 }
 
 #controls .scene-control.active,
 #controls .control-tool.active,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-    border: 1px solid rgb(255, 179, 0);
-    border-bottom: 1px solid rgb(255, 179, 0);
-    box-shadow: 0 0 10px rgb(255, 179, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    background-image: url("../../asset/image/tool-button-pressed.png");
 }
 
 #hotbar .bar-controls {
