@@ -1,3 +1,7 @@
+a:hover {
+    text-shadow: 0 0 10px white;
+  }
+
 #logo {
     background-image: url("../../asset/image/fvtt.png");
     background-size: contain;
@@ -10,7 +14,7 @@
     background-image: url("../../asset/image/sidebar.png");
     background-color: rgba(0, 12, 53, 0.781);
     border-width: 5px 5px 5px 5px;
-    border-image: url("../../asset/image/trimmed-border2.png") 10 10 10 10 repeat repeat;
+    /*border-image: url("../../asset/image/trimmed-border2.png") 10 10 10 10 repeat repeat;*/
     box-shadow: 0 0 0px rgb(255, 179, 0);
 }
 
@@ -52,13 +56,22 @@
 #sidebar-tabs {
     border-bottom: 1px solid rgb(255, 179, 0);
     box-shadow: 0 0 10px rgb(255, 179, 0);
-    background-image: url("../../asset/image/sidebar-header.png");
+    /*background-image: url("../../asset/image/sidebar-header.png");*/
+}
+
+#sidebar-tabs > .item {
+    background-image: url("../../asset/image/small-button.png");
+    font-size: 12px;
+    color: rgb(187, 187, 187);
 }
 
 #sidebar-tabs > .item.active {
     color: white;
     border: 1px solid rgba(0,0,0,0);
     box-shadow: 0 0 6px inset rgba(0,0,0,0);
+    background-image: url("../../asset/image/small-button-pressed.png");
+    /*text-shadow:0, 0, 10px rgb(10, 72, 214);*/
+    text-shadow: none;
 }
 
 .sidebar-tab .directory-list .directory-item.context,
