@@ -112,7 +112,6 @@ async function executeMacro(actorId, type, name) {
   let rank = actor.data.data.advances.rank;
   let roll = actor._defaultRollData(rank);
   
-  roll.pool = {};
   roll.name = name.toLowerCase();
 
   if(type == "attribute") {
