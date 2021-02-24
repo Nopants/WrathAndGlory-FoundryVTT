@@ -1,10 +1,10 @@
 <div class="stats">
   <div class="wrapper">
     <h1>{{localize "TITLE.ATTRIBUTES"}}</h1>
-    <div class="attributes">
+    <div class="attributes" data-actor-id={{actor._id}}>
       {{#each data.attributes as |attribute key|}}
       <div class="attribute">
-        <label class="roll-attribute hover" data-attribute="{{key}}">{{localize attribute.label}}</label>
+        <label class="roll-attribute hover" data-attribute="{{key}}" data-actor-name="{{data.name}}">{{localize attribute.label}}</label>
         <input type="number" value="{{attribute.total}}" data-dtype="Number" disabled />
       </div>
       {{/each}}
@@ -12,7 +12,7 @@
   </div>
   <div class="wrapper" style="margin-top: 8px;">
     <h1>{{localize "TITLE.SKILLS"}}</h1>
-    <div class="skills">
+    <div class="skills" data-actor-id={{actor._id}}>
       <div class="left">
         {{#each data.skills as |skill key|}}
         {{#if skill.isLeft}}

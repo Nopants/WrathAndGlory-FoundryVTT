@@ -6,6 +6,7 @@ export class WrathAndGloryActorSheet extends ActorSheet {
 
     activateListeners(html) {
         super.activateListeners(html);
+
         html.find(".item-create").click(ev => this._onItemCreate(ev));
         html.find(".item-edit").click(ev => this._onItemEdit(ev));
         html.find(".item-delete").click(ev => this._onItemDelete(ev));
@@ -21,12 +22,46 @@ export class WrathAndGloryActorSheet extends ActorSheet {
         html.find(".roll-psychic-power").click(async ev => await this._prepareRollPsychicPower(ev));
 
         // Drag inventory item
-        let handler = (ev) => this._onDragStart(ev);
-        html.find('.list-item').each((i, item) => {
-            if (item.dataset && item.dataset.itemId) {
+        let handler = (ev) => {
+            this._onDragStart(ev);
+        }
+        
+        html.find('.roll-attribute').each((i, item) => {
+            if (true) {
                 item.setAttribute('draggable', true);
                 item.addEventListener('dragstart', handler, false);
             }
+        });
+
+        html.find('.roll-skill').each((i, item) => {
+            if (true) {
+                item.setAttribute('draggable', true);
+                item.addEventListener('dragstart', handler, false);
+            }
+        });
+        
+        html.on("dragstart", ".roll-attribute", event => {
+            let actorId = event.target.parentElement.parentElement.dataset.actorId;
+            let name = event.target.innerHTML;
+
+            let dataTransfer = {
+                type: "attribute",
+                name: name,
+                actorId: actorId
+            };
+            event.originalEvent.dataTransfer.setData("text/plain", JSON.stringify(dataTransfer));
+        });
+
+        html.on("dragstart", ".roll-skill", event => {
+            let actorId = event.target.parentElement.parentElement.parentElement.dataset.actorId;
+            let name = event.target.innerHTML;
+            
+            let dataTransfer = {
+                type: "skill",
+                name: name,
+                actorId: actorId
+            };
+            event.originalEvent.dataTransfer.setData("text/plain", JSON.stringify(dataTransfer));
         });
     }
 

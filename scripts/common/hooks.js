@@ -33,7 +33,8 @@ Hooks.once("init", () => {
     weaponRoll,
     psychicRoll,
     damageRoll,
-    reroll
+    reroll,
+    executeMacro
   };
   CONFIG.Combat.initiative = { formula: "(@attributes.initiative.total)d6", decimals: 0 };
   Actors.unregisterSheet("core", ActorSheet);
@@ -84,3 +85,45 @@ Hooks.on("preCreateActor", (createData) => {
     createData.token.actorLink = true;
   }
 });
+
+Hooks.on('hotbarDrop', (bar, data, slot) => {
+  createWAGMacro(data, slot);
+});
+
+async function createWAGMacro(data, slot) {
+  const command = `game.wag.executeMacro("${data.actorId}", "${data.type}", "${data.name}")`;
+console.log(data.name);
+  let macro = game.macros.entities.find(m => (m.name === data.name) && (m.command === command));
+  if (!macro) {
+    macro = await Macro.create({
+      name: data.name,
+      type: "script",
+      //img: item.img,
+      command: command,
+      flags: { "wrath-and-glory.attributeMacro": true }
+    });
+  }
+  game.user.assignHotbarMacro(macro, slot);
+  return false;
+}
+
+async function executeMacro(actorId, type, name) {
+  let actor = game.actors.get(actorId);
+  let rank = actor.data.data.advances.rank;
+  let roll = actor._defaultRollData(rank);
+  
+  roll.pool = {};
+  roll.name = name.toLowerCase();
+
+  if(type == "attribute") {
+    //console.log("Attribut!");
+    roll.pool.size = actor.data.data.attributes[roll.name].total;
+  }
+
+  if (type == "skill") {
+    //console.log("Skill!");
+    roll.pool.size = actor.data.data.skills[roll.name].total;
+  }
+
+  game.wag.prepareCommonRoll(roll);
+}
