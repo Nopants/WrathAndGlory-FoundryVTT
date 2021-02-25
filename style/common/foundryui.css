@@ -10,12 +10,34 @@ a:hover {
     content:url("../../asset/image/blank.png");
 }
 
+
 #sidebar {
+    /*
     background-image: url("../../asset/image/sidebar.png");
     background-color: rgba(0, 12, 53, 0.781);
     border-width: 5px 5px 5px 5px;
-    /*border-image: url("../../asset/image/trimmed-border2.png") 10 10 10 10 repeat repeat;*/
     box-shadow: 0 0 0px rgb(255, 179, 0);
+    */
+    /*border-image: url("../../asset/image/trimmed-border2.png") 10 10 10 10 repeat repeat;*/
+    /*border: 0px;*/
+}
+
+#chat {
+    border-image-source: url("../../asset/image/sidebar-fit.png");
+    border-image-slice: 22;
+    border-image-width: 22;
+    border-image-outset: 1;
+    border-image-repeat: round;
+    border-width: 1px;
+    border-style: solid;
+
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#chat-form textarea {
+    height: 80%;
 }
 
 #players {
@@ -54,7 +76,7 @@ a:hover {
 }
 
 #sidebar-tabs {
-    border-bottom: 1px solid rgb(255, 179, 0);
+    border-bottom: 0px;
     box-shadow: 0 0 10px rgb(255, 179, 0);
     /*background-image: url("../../asset/image/sidebar-header.png");*/
 }
