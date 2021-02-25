@@ -2,6 +2,10 @@ a:hover {
     text-shadow: 0 0 10px white;
   }
 
+.wrath-and-glory.chat .die {
+    margin: 2px;
+}
+
 #logo {
     background-image: url("../../asset/image/fvtt.png");
     background-size: contain;
