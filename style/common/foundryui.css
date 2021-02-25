@@ -21,7 +21,9 @@ a:hover {
     /*border: 0px;*/
 }
 
-#chat {
+#chat,
+#combat-tracker {
+
     border-image-source: url("../../asset/image/sidebar-fit.png");
     border-image-slice: 22;
     border-image-width: 22;
