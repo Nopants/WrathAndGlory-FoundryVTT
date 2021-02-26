@@ -14,6 +14,52 @@ a:hover {
     content:url("../../asset/image/blank.png");
 }
 
+.window-app .window-header {
+    background-image: url("../../asset/image/window-header-bg.png");
+    background-color: transparent;
+    border-image: url("../../asset/image/trimmed-border2.png");
+    border-image-repeat: repeat;
+    border-image-slice: 10;
+    border-image-width: 6px 6px 0px 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+
+    box-shadow: inset 0px 0px 15px 0px rgb(111, 109, 255);
+
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+}
+
+.window-app .window-content {
+
+    background-image: url("../../asset/image/background.jpg");
+    
+    border-color: black;
+    border: solid 5px;
+    border-width: 0px 5px 5px 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    border-image-source: url("../../asset/image/trimmed-border2.png");    
+    border-image-repeat: repeat;
+    border-image-slice: 10;
+    border-image-outset: 0;
+    border-image-width: 0px 6px 6px 6px;
+    box-shadow: inset 0px 0px 10px 0px black;
+    /*box-shadow: 1px 1px 10px 0px black;*/
+}
+
+::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: rgba(0, 12, 53, 0.5);
+    border: 1px solid rgba(174, 176, 255, 0.5);
+}
 
 #sidebar {
     
