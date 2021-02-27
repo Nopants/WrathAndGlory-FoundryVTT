@@ -20,6 +20,7 @@ import { initializeHandlebars } from "./handlebars.js";
 import { migrateWorld } from "./migration.js";
 import { prepareCommonRoll, prepareWeaponRoll, prepareDamageRoll, preparePsychicRoll } from "./dialog.js";
 import { commonRoll, weaponRoll, damageRoll, psychicRoll, reroll } from "./roll.js";
+import { pinterest } from "./pinterest.js";
 
 Hooks.once("init", () => {
   CONFIG.Actor.entityClass = WrathAndGloryActor;
@@ -34,7 +35,8 @@ Hooks.once("init", () => {
     psychicRoll,
     damageRoll,
     reroll,
-    executeMacro
+    executeMacro,
+    pinterest
   };
   CONFIG.Combat.initiative = { formula: "(@attributes.initiative.total)d6", decimals: 0 };
   Actors.unregisterSheet("core", ActorSheet);
@@ -69,6 +71,7 @@ Hooks.once("init", () => {
 
 Hooks.once("ready", () => {
   migrateWorld();
+  pinterest();
 });
 
 Hooks.on("preCreateActor", (createData) => {
