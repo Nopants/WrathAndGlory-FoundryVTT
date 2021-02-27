@@ -72,7 +72,8 @@ a:hover {
 }
 
 #chat,
-#combat-tracker {
+#combat-tracker,
+.sidebar-tab .directory-list {
 
     border-image-source: url("../../asset/image/sidebar-fit.png");
     border-image-slice: 22;
